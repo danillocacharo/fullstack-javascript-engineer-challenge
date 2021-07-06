@@ -1,0 +1,28 @@
+<div class="app">
+  <mat-toolbar class="bg-white row">
+    <h1 class="ml-1">{{ label }}</h1>
+    <span class="spacer"></span>
+    <button class="text-secondary" mat-button aria-label="View" [routerLink]="['/restricted/user-type']">
+      <mat-icon>arrow_back</mat-icon> Back
+    </button>
+  </mat-toolbar>
+
+  <div class="col-md-12">
+    <form [formGroup]="userTypeForm" (submit)="save()">
+      <mat-form-field class="full-width col-md-6" appearance="fill" [floatLabel]="descriptionControl.value">
+        <mat-label>Description</mat-label>
+        <input matInput name="description" [formControl]="descriptionControl" placeholder="Description" value="" maxlength="255" required>
+      </mat-form-field>
+
+      <mat-radio-group name="active" class="full-width col-md-6 mt-3" id="active" [formControl]="activeControl" required>
+        <mat-radio-button [checked]="activeControl.value" style="padding-right: 10px;" value="true">Active</mat-radio-button>
+        <mat-radio-button [checked]="!activeControl.value" value="false">Inactive</mat-radio-button>
+      </mat-radio-group>
+      
+      <mat-toolbar class="bg-white row">
+        <span class="spacer"></span>
+        <button [disabled]="verify()" mat-button class="text-success" type="submit">Save</button>
+      </mat-toolbar>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<mat-sidenav-container class="app">
+  <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true">
+    <mat-nav-list class="nav-list">
+      <a mat-list-item [routerLink]="['/restricted/home']">Home</a>
+      <a mat-list-item [routerLink]="['/restricted/user']">User</a>
+      <a mat-list-item [routerLink]="['/restricted/user-type']">UserType</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

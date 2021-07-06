@@ -1,0 +1,55 @@
+.app {
+    padding: 30px;
+}
+
+table {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.text-secondary {
+    color: gray;
+}
+
+.text-warning {
+    color: orange;
+}
+
+.text-danger {
+    color: red;
+}
+
+.text-success {
+    color: green;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+.app-dialog {
+    width: 400px;
+}
+
+.form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .full-width {
+    width: 100%;
+  }

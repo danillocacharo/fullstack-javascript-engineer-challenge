@@ -1,0 +1,16 @@
+<div class="app">
+  <mat-toolbar class="bg-white">
+    <h1 class="ml-1">{{ model?.description }}</h1>
+    <span class="spacer"></span>
+    <button class="text-secondary" mat-button aria-label="View" [routerLink]="['/restricted/user-type']">
+      <mat-icon>arrow_back</mat-icon> Back
+    </button>
+  </mat-toolbar>
+
+  <div *ngIf="!model || !model.id" class="text-center">UserType not found!</div>
+  <mat-card>
+    <div>Description: <b>{{ model?.description }}</b></div>
+    <div>Created: <b>{{ model.createdAt | pipeDate }}</b></div>
+    <div>Updated: <b>{{ model.updatedAt | pipeDate }}</b></div>
+  </mat-card>
+</div>

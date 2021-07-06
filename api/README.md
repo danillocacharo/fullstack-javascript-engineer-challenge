@@ -32,6 +32,37 @@
 $ npm install
 ```
 
+## Database User Access
+
+```bash
+# development
+$ CREATE USER 'maxxidata'@'localhost' IDENTIFIED BY 'maxxidata';
+
+$ GRANT ALL PRIVILEGES ON maxxidata_db.* TO 'maxxidata'@'localhost';
+```
+
+
+## Create DB
+
+```bash
+# development
+$ npm run db:create
+```
+
+## Migrations DB
+
+```bash
+# development
+$ npm run db:migrate
+```
+
+## Seeders DB
+
+```bash
+# development
+$ npm run db:seed-dev
+```
+
 ## Running the app
 
 ```bash
@@ -44,6 +75,11 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+## API Doc
+
+http://localhost:3000/api
+
 
 ## Test
 

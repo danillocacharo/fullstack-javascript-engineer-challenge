@@ -1,0 +1,20 @@
+<div class="app">
+  <mat-toolbar class="bg-white row">
+    <h1 class="ml-1">Delete {{ user?.nickname }} ?</h1>
+    <span class="spacer"></span>
+    <button class="text-secondary" mat-button aria-label="View" [routerLink]="['/restricted/user']">
+      <mat-icon>arrow_back</mat-icon> Back
+    </button>
+  </mat-toolbar>
+
+  <mat-form-field class="full-width col-md-12" appearance="fill">
+    <mat-label>Confirm nickname:</mat-label>
+    <input matInput #nickname value="" maxlength="255" required>
+  </mat-form-field>
+
+  <br>
+  <div class="text-right">
+    <button [disabled]="confirmNickname(nickname.value)" mat-button (click)="remove(user.id)" class="text-danger">Yes</button>
+    <button mat-button  class="text-secondary">No</button>
+  </div>
+</div>
