@@ -1,7 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { UserType } from './user-type.entity';
 import { configure, getLogger } from "log4js";
-configure("./logs");
 const logger = getLogger();
 logger.level = "debug";
 
